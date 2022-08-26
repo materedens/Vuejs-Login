@@ -36,8 +36,12 @@
       </b-row>
     </b-container>
     <b-modal id="modal1" title="Forgot Password">
-      <b-form-group id="input-group-3" label="Password:" label-for="input-3">
-        <b-form-input id="input-3" v-model="form.password" type="password" placeholder="Enter Password" required>
+      <b-form-group id="input-group-3" label="New Password:" label-for="input-3">
+        <b-form-input id="input-3" v-model="form.password" type="password" placeholder="New Password" required>
+        </b-form-input>
+      </b-form-group>&nbsp;
+      <b-form-group id="input-group-4" label="Confirm Password:" label-for="input-4">
+        <b-form-input id="input-4" v-model="form.password" type="password" placeholder="Confirm Password" required>
         </b-form-input>
       </b-form-group>&nbsp;
       <div class="d-flex justify-content-between">
@@ -80,7 +84,6 @@ export default {
       // Reset our form values
       this.form.email = ''
       this.form.password = ''
-      this.form.food = null
       this.form.checked = []
       // Trick to reset/clear native browser form validation state
       this.show = false
