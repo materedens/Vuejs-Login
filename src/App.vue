@@ -42,7 +42,7 @@
       </b-form-group>&nbsp;
       <div class="d-flex justify-content-between">
         <div>
-          <b-button type="submit" variant="primary">Submit</b-button>
+          <b-button type="submit" variant="success">Submit</b-button>
         </div>
       </div>
     </b-modal>
@@ -53,7 +53,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 body {
-  background: #ffffff !important;
+  background: #EEF1F4 !important;
   font-family: 'Lato', sans-serif !important;
 }
 </style>
@@ -63,11 +63,10 @@ export default {
     return {
       form: {
         email: '',
-        name: '',
-        food: null,
+        password: '',
         checked: []
       },
-      foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+
       show: true
     }
   },
@@ -80,7 +79,7 @@ export default {
       event.preventDefault()
       // Reset our form values
       this.form.email = ''
-      this.form.name = ''
+      this.form.password = ''
       this.form.food = null
       this.form.checked = []
       // Trick to reset/clear native browser form validation state
